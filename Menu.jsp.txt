@@ -1,0 +1,123 @@
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>JSP Page</title>
+ <style> 
+ body{
+ background-image:url("images/activeblood.jpg");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-attachment:fixed;
+ background-position:absolute;
+ height:0px;
+ 
+ }
+ .topnav {
+ overflow: hidden;
+ background-color: #333;
+ }
+ .topnav a {
+ float: left;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ }
+ .topnav a:hover {
+ background-color: #ddd;
+ color: black;
+ }
+ .topnav a:active {
+ background-color: #4CAF50;
+ color: white;
+ }
+ #logout{
+ left:850px;
+ position:relative;
+ }
+ #head{
+ left:550px;
+ position:relative;
+ }
+ 
+ p{
+ background-color:rgba(0,0,0,.5);
+ color:white;
+ font-size:33px;
+ top:150px;
+ position:absolute;
+ left:100px;
+ right:100px;
+ padding:20px;
+ }
+ 
+ </style> 
+ </head>
+ <body>
+ <div class="topnav">
+ <a class="active" href="home.jsp">Home</a>
+ <a href="menu.jsp">Menu</a>
+ <a href="bookAppointment.jsp">Departments</a>
+ <a href="onlineHelp.jsp">Help</a>
+ <a href="aboutUs.jsp">About</a>
+ 
+ <a href="feedback.jsp">Feedback</a>
+ <a id="logout" href="home.jsp">LOG OUT</a> 
+ </div>
+ <div align ="center" style="margin:auto;margin-top:15px;margin-bottom:15px;">
+ <div align ="center">
+ <h1>Menu Page</h1>
+ </div>
+ <form action="menuServlet" method="post">
+ <table style="padding:50px;">
+ <tr >
+ <td colspan="100%"> <img style="height:200px;width:800px;" 
+src="images/appoint.png"></td>
+ </tr>
+ 
+ <tr >
+ <td colspan="100%"align="center" style="border:1px solid black;backgroundcolor:gray;margin-top:15px;margin-bottom:15px;padding-top:15px;padding-bottom:25px">
+ <a style="color:black;text-decoration:none;color:white;" 
+href="bookAppointment.jsp">Book Appointment</a></td>
+ 
+ </tr>
+ <tr>
+ 
+ <td> <img style="height:200px;width:270px;" src="images/aboutus.png"></td>
+ <td> <img style="height:200px;width:260px;" src="images/help.jpeg"></td>
+ <td> <img style="height:200px;width:270px;" src="images/feedback.jpeg"></td>
+ </tr>
+ <tr>
+ <td align="center" style="border:1px solid black;background-color: GRAY"><a 
+style="background-color:gray;margin-top:15px;margin-bottom:15px;padding-top:15px;paddingbottom:25px">
+ <a style="color:black;text-decoration:none;color:white;" href="aboutUs.jsp">About 
+Us</a></td>
+ <td align="center" style="border:1px solid black;background-color: GRAY"><a 
+style="background-color:gray;margin-top:15px;margin-bottom:15px;padding-top:15px;paddingbottom:25px">
+ <a style="color:black;text-decoration:none;color:white;" href="onlineHelp.jsp">Online 
+Help?</a></td>
+ <td align="center" style="border:1px solid black;background-color: GRAY"><a 
+style="background-color:gray;margin-top:15px;margin-bottom:15px;padding-top:15px;paddingbottom:25px">
+ <a style="color:black;text-decoration:none;color:white;" 
+href="feedback.jsp">Feedback</a></td
+ </tr>
+ <tr>
+ <td></td>
+ </tr>
+ <tr>
+ <td></td>
+ </tr>
+ <tr>
+ <td></td>
+ </tr>
+ 
+ </table>
+ </form>
+ </div>
+ </body>
+</html>

@@ -1,0 +1,67 @@
+
+<%--
+ Document : signup
+ Created on : 5 Nov, 2023, 11:10:52 PM
+ Author : Neha Grandhe
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>JSP Page</title>
+ <style> 
+ body{
+ background-image:url("images/login.jpg");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-atttachment:fixed;
+ background-position:absolute;
+ height:0px;
+ overflow:hidden;
+ }
+ </style>
+ </head>
+ <body>
+ <div align ="center" style="border:1px solid black;width:600px;margin:auto;margintop:150px;margin-bottom:15px;padding-top:15px;padding-bottom:25px">
+ <div align ="center">
+ <h1>SignUp Form</h1>
+ </div>
+ <form method="post" action="SignUpServlet">
+ <table>
+ <tr>
+ <td> Enter Name :</td><td><input type="text" name="t1"></td>
+ </tr>
+ <tr>
+ <td>Enter Email :</td><td><input type="text" name="t2"></td>
+ </tr>
+ <tr>
+ <td>Enter Contact No :</td><td><input type="text" name="t3"></td>
+ </tr>
+ <tr>
+ <td>Gender:</td><td> <input type="radio" value="Male" name="gender">Male</td>
+ </tr>
+ <tr>
+ <td></td><td> <input type="radio" value="Female" name="gender">Female</td>
+ </tr>
+ <tr>
+ <td>Enter Age :</td><td><input type="text" name="t4"> </td>
+ </tr>
+ <tr>
+ <td>Enter UserName :</td><td><input type="text" name="t5"></td> 
+ </tr>
+ <tr>
+ <td>Enter Password :</td><td><input type="password" name="t6"> </td>
+ </tr>
+ <tr>
+ <td> <input type="submit" value="SignUp"></td> <td><input type="reset" 
+value="clear"></td>
+ </tr>
+ 
+ </table>
+ <br><br>
+ Already have an account? <a href="login.jsp">Login</a>
+ </form>
+ </div>
+ </body>
+</html>

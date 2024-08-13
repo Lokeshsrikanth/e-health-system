@@ -1,0 +1,42 @@
+Home.jsp
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+ <head>
+ <title>TODO supply a title</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ body{
+ background-image:url("images/ehealthhomepage.png");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-atttachment:fixed;
+ background-position:absolute;
+ height:0px;
+ overflow:hidden;
+ }
+ </style>
+ </head>
+ <body >
+ <div align="center" style="width:600px;padding-top:15px;margin:auto;margintop:50px;margin-bottom:15px">
+ <h1 align="center" style="font-weignt:bold;font-size:50px;color:white;"> E-HEALTH SERVICES 
+</h1>
+ </div>
+ <div style="color:white;border:1px solid black;width:600px;paddingtop:15px;margin:auto;margin-top:15px;margin-bottom:15px">
+ <br><h1 align="center">Home Page</h1><br> 
+ </pre>
+ <div align ="center " style="font-size:40px;border:1px solid 
+black;width:600px;margin:auto;margin-top:15px;margin-bottom:15px">
+ <br>Existing User : <a style="font-weight:bold;color:black;textdecoration:none;color:white;margin-top:15px;margin-bottom:15px;padding-top:15px;paddingbottom:25px"href="login.jsp">Login</a><br><br>
+ New User : <a style="font-weight:bold;color:black;textdecoration:none;color:white;margin-top:15px;margin-bottom:15px;padding-top:15px;paddingbottom:25px"href="signup.jsp">SignUp</a>
+ </pre>
+ </div>
+ </div>
+ 
+ </body>
+</html>

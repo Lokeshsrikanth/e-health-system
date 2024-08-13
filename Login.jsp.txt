@@ -1,0 +1,51 @@
+Login.jsp
+<%--
+ Document : login
+ Created on : 5 Nov, 2023, 7:58:53 PM
+ Author : Neha Grandhe
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+ <head>
+ <style>
+ body{
+ background-image:url("images/blood.jpg");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-atttachment:fixed;
+ background-position:absolute;
+ height:0px;
+ overflow:hidden;
+ }
+ </style>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>Login</title>
+ </head>
+ <body>
+ <div align ="center" style="border:1px solid black;width:600px;margin:auto;margintop:250px;margin-bottom:15px;padding-top:15px;padding-bottom:25px">
+ <div align ="center">
+ <h1>User Login</h1>
+ </div>
+ <form action="LoginServlet" method="post">
+ <table>
+ <tr>
+ <td>Enter Name :</td>
+ <td><input type="text" name="txtName"></td>
+ </tr>
+ <tr>
+ <td>Enter Password:</td>
+ <td><input type="password" name="txtPass"></td>
+ </tr>
+ <tr>
+ <td><input type="submit" value="Login"></td>
+ <td><input type="reset" value="reset"></td>
+ </tr>
+ <tr></tr>
+ <tr>
+ <td>Doesn't have an account? <a href="signup.jsp">SignUp</a></td>
+ </tr>
+ </table>
+ </form>
+ </body>
+</html>

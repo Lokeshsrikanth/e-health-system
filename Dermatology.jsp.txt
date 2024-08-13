@@ -1,0 +1,189 @@
+
+
+<%@page import="java.io.*,java.util.*,javax.servlet.*" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>JSP Page</title>
+ <style> 
+ body{
+ background-image:url("images/gold.jpg");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-attachment:fixed;
+ background-position:absolute;
+ height:0px;
+ 
+ }
+ .topnav {
+ overflow: hidden;
+ background-color: #333;
+ }
+ .topnav a {
+ float: left;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ }
+ .topnav a:hover {
+ background-color: #ddd;
+ color: black;
+ }
+ .topnav a:active {
+ background-color: #4CAF50;
+ color: white;
+ }
+ #logout{
+ left:850px;
+ position:relative;
+ }
+ #head{
+ left:550px;
+ position:relative;
+ }
+ p{
+ background-color:rgba(0,0,0,.5);
+ color:white;
+ font-size:33px;
+ top:150px;
+ position:absolute;
+ left:100px;
+ right:100px;
+ padding:20px;
+ }
+ 
+ </style> 
+ </head>
+ <body>
+ <div class="topnav">
+ <a class="active" href="home.jsp">Home</a>
+ <a href="menu.jsp">Menu</a>
+ <a href="bookAppointment.jsp">Departments</a>
+ <a href="onlineHelp.jsp">Help</a>
+ <a href="aboutUs.jsp">About</a>
+ 
+ <a href="feedback.jsp">Feedback</a>
+ <a id="logout" href="home.jsp">LOG OUT</a> 
+ </div>
+ <div align="center" style="font-size:50px;color:black;font-style:arial;border:1px solid 
+black;margin-bottom:15px;background-color:#FFFFE0">
+ <%
+ String name=(String)session.getAttribute("uname");
+ out.print("Welcome "+name);
+ %>
+ </div>
+ <hr>
+ <div style="border:1px solid black;width:600px;margin:auto;margin-top:15px;marginbottom:15px;"> 
+ <div align ="left" >
+ <h1 style="background-color:red;color:white;">Request Appointment</h1>
+ </div>
+ 
+ <form method="post" action="DermatologyServlet">
+ <table >
+ <tr>
+ <td colspan="4"><div align ="left" >
+ <h3 style="background-color:skyblue;color:black;">Personal Details</h3>
+ </div></td>
+ 
+ </tr>
+ <tr>
+ <td>Patient Name :</td>
+ </tr>
+ <tr>
+ <td><input type="text" name="firstname" placeholder="First"></td><td><input 
+type="text" name="lastname" placeholder="Last"></td>
+ </tr>
+ <tr></tr>
+ <tr>
+ <td>Age :</td> <td><input type="text" name="age" placeholder="00"></td>
+ </tr>
+ <tr>
+ <td>Gender:</td><td> <input type="radio" value="Male" name="gender">Male</td>
+ </tr>
+ <tr>
+ <td></td><td> <input type="radio" value="Female" name="gender">Female</td>
+ </tr>
+ <tr>
+ <td>Email :</td> <td><input type="text" name="email" 
+placeholder="xyz@gmail.com"></td>
+ </tr>
+ <tr>
+ <td>Contact Number :</td> <td><input type="text" name="contact" placeholder="### 
+### ####"></td>
+ </tr>
+ 
+ 
+ <tr>
+ <td colspan="4"><div align ="left" >
+ <h3 style="background-color:skyblue;color:black;">Appointment Details</h3>
+ </div></td>
+ 
+ </tr>
+ <tr>
+ <td> Date of Appointment :</td> <td><input type="date" name="dob"> </td>
+ </tr>
+ <tr>
+ <td>Appointment Time:</td>
+ <td><input type="time" id="time" name="time" /></td>
+ </tr>
+ <tr>
+ <td>Problem:</td><td><textarea rows="4" cols="20" name="problem"></textarea></td>
+ </tr>
+ <tr>
+ <td>Select Doctor :</td>
+ <td> 
+ <select name="type">
+ <option value="" selected="selected">Select</option>
+ <option value="Neha Grandhe" >Neha Grandhe</option>
+ <option value="Balaka Bhuvaneswari" >Balaka Bhuvaneswari</option>
+ <option value="Balaka Bhuvaneswari" >Sowmitha T</option>
+ <option value="Balaka Bhuvaneswari" >ArshaVarthini</option>
+ <option value="Balaka Bhuvaneswari" >Manush M</option>
+ </select>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="4"><div align ="left" >
+ <h3 style="background-color:skyblue;color:black;">Other Details</h3>
+ </div></td>
+ 
+ </tr>
+ <tr>
+ <td>How did you hear about us?</td><td><input type="checkbox" name="ck1" 
+value="newspaper">Newspaper </td>
+ </tr>
+ <tr>
+ <td></td><td><input type="checkbox" name="ck2" value="socialmedia">Social Media 
+</td>
+ </tr>
+ <tr>
+ <td></td><td><input type="checkbox" name="ck3" value="friends">Friends </td>
+ </tr>
+ <tr>
+ <td></td><td><input type="checkbox" name="ck4" value="other">other </td>
+ </tr>
+ <tr><td></td></tr>
+ <tr>
+ <td><input type="submit" value="Register Appointment"></td>
+ <td><input type="reset" value="Reset"></td>
+ </tr> 
+ </table> 
+ </form>
+ </div>
+ 
+ <hr>
+ <div align="center" style="font-size:15px;color:Blue;font-style:arial;border:1px solid 
+black;margin-top:30px;background-color:#FFFFE0">
+ <%
+ Date date=new Date();
+ out.print("<h2 align=\"center\">"+date.toString()+"</h2>");
+ out.print("<h2>Your IP Address : "+request.getRemoteAddr()+"</h2>");
+ %>
+ 
+ </div>
+ </body>
+</html>
